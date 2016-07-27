@@ -1,0 +1,24 @@
+{
+  "name": "ite/js-ajax-block",
+  "type": "library",
+  "description": "Add support of constants to JSBundle.",
+  "keywords": ["javascript", "constants"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "sam0delkin",
+      "email": "t.samodelkin@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4",
+    "ite/js-bundle": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "ITE\\Js\\Constant": ""
+    }
+  },
+  "target-dir": "ITE/Js/Constant"
+}
