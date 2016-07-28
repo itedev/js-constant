@@ -69,11 +69,11 @@ class ConstantSFExtension extends SFExtension
             return '';
         }
 
-        $js = '(function($){$(function(){';
+        $js = '(function(){';
         foreach ($this->constants as $constant) {
             $js .= sprintf('SF.constants.addConstant(%s);', json_encode($constant));
         }
-        $js .= '});})(jQuery);';
+        $js .= '})();';
 
         return $js;
     }
