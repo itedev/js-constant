@@ -1,0 +1,9 @@
+parameters:
+    ite_js.sf.extension.constant.class: ITE\Js\Constant\SF\Extension\ConstantSFExtension
+
+services:
+    ite_js.sf.extension.constant:
+        class: %ite_js.sf.extension.constant.class%
+        arguments: [ %ite_js.constant.constants% ]
+        tags:
+            - { name: ite_js.sf.extension, alias: constant }
