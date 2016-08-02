@@ -13,13 +13,28 @@
             }
             this.constants[constant.alias][constant.name] = constant.value;
         },
-        getConstant: function (name, alias) {
-            alias = alias || '';
+        get: function () {
+            var args = Array.from(arguments);
+            var name = '';
+            var alias = '';
+
+            if (args.length == 1) {
+                name = args.pop();
+            } else if (args.length == 2) {
+                name = args.pop();
+                alias = args.pop();
+            } else {
+                console.error('Invalid number of arguments');
+
+                return null;
+            }
+
             if (typeof this.constants[alias] == 'undefined') {
                 console.error('Alias "' + alias + '" was not found.');
 
                 return null;
             }
+
             if (typeof this.constants[alias][name] == 'undefined') {
                 console.error('Constant "' + name + '" was not found.');
 
