@@ -14,7 +14,7 @@
             this.constants[constant.alias][constant.name] = constant.value;
         },
         get: function () {
-            var args = Array.from(arguments);
+            var args = $.extend([], arguments);
             var name = '';
             var alias = '';
 
